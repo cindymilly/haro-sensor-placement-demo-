@@ -1,0 +1,6 @@
+Scenario,Active_Stations,Mean_Retained_Coverage,Coverage_Drop,Retention_Ratio,Operational_Status
+Baseline (Fully Operational Network),10/10 (100%),28.84%,0.00%,100.00%,Optimal Continuous Surveillance
+Random Single Station Outage,9/10 (90%),26.59%,-2.25%,92.19%,Highly Resilient (Minimal Degradation)
+Worst-Case Single Station Outage,9/10 (90%),25.88%,-2.96%,89.72%,Robust (Primary Hotspot Backed Up)
+Random Dual Station Outage,8/10 (80%),24.24%,-4.60%,84.06%,Sustainable Municipal Monitoring
+Worst-Case Dual Station Outage,8/10 (80%),23.13%,-5.71%,80.21%,Acceptable (Zero Complete Blindness)

@@ -1,0 +1,17 @@
+\begin{table}[htbp]
+\centering
+\caption{Spatial field reconstruction validation against Copernicus CAMS PM2.5 ground truth from $K=10$ monitoring stations}
+\label{tab:spatial_reconstruction_rmse}
+\begin{tabular}{lcccc}
+\hline
+\textbf{Paradigm / Algorithm} & \textbf{RMSE ($\mu$g/m$^3$)} & \textbf{MAE ($\mu$g/m$^3$)} & \textbf{$R^2$ Score} & \textbf{Hotspot RMSE ($\mu$g/m$^3$)} \\
+\hline
+Existing Municipal Network (Baseline) & 22.236 & 19.306 & -0.9033 & 12.254 \\
+Random Feasible Placement & 18.876 & 12.163 & -0.3715 & 45.209 \\
+GA & 20.153 & 17.279 & -0.5634 & 14.537 \\
+PSO & 17.759 & 15.406 & -0.2141 & 19.126 \\
+Baseline ARO & 16.095 & 14.042 & 0.0027 & 14.42 \\
+\textbf{Proposed HARO} & \textbf{19.294} & \textbf{16.312} & \textbf{-0.433} & \textbf{9.006} \\
+\hline
+\end{tabular}
+\end{table}

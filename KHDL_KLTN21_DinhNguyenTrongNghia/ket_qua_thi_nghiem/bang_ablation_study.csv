@@ -1,0 +1,6 @@
+Variant,Mean_Coverage,Std_Coverage,Best_Coverage,Diff_to_Full,Wilcoxon_p,Avg_Runtime_s
+Full HARO (Proposed),27.66%,0.63%,28.84%,0.00%,N/A (Baseline),13.12s
+HARO-noJump (No Quantum Jump),27.86%,0.38%,28.35%,+0.20%,8.3487e-01,12.99s
+"HARO-noRep (No Repulsion, beta=0)",28.15%,0.49%,28.75%,+0.49%,9.5837e-01,12.88s
+HARO-Linear (Linear Contraction),28.05%,0.41%,28.83%,+0.39%,9.6350e-01,13.05s
+HARO-1Layer (Single Fixed Halo),27.97%,0.57%,28.67%,+0.31%,9.4650e-01,12.84s

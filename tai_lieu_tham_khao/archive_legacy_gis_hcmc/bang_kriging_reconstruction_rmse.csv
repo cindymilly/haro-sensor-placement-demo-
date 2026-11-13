@@ -1,0 +1,7 @@
+Model / Algorithm,RMSE (ug/m3),MAE (ug/m3),R2_Score,Hotspot_RMSE (ug/m3)
+Existing Municipal Network (Baseline),22.236,19.306,-0.9033,12.254
+Random Feasible Placement,18.876,12.163,-0.3715,45.209
+GA,20.153,17.279,-0.5634,14.537
+PSO,17.759,15.406,-0.2141,19.126
+Baseline ARO,16.095,14.042,0.0027,14.42
+Proposed HARO,19.294,16.312,-0.433,9.006

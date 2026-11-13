@@ -1,0 +1,7 @@
+Algorithm,Mean Coverage (%),Coverage Std,Best Coverage (%),Hotspots Monitored,Feasibility Rate,Min Inter-Station Distance (km),Runtime (s)
+Existing Municipal Network (Baseline),47.78818071300096,0.0,47.78818071300096,10/12,0% (Severe core clustering),1.36 km (Violated),0.0
+Proposed HARO,61.78,0.67,62.34,10.0/12,100%,6.05 km,3.85
+Baseline ARO,59.95,0.38,60.47,9.7/12,100%,5.07 km,4.0
+PSO,58.93,2.84,61.88,10.3/12,100%,6.16 km,3.96
+MVO,62.82,0.6,63.25,10.3/12,100%,6.44 km,3.77
+GA,61.82,0.33,62.17,11.3/12,100%,5.97 km,3.64

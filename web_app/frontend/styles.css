@@ -1,0 +1,220 @@
+/* Custom Stylesheet for HCMC Air Quality Monitoring Sensor Placement Demo */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  
+  --bg-primary: #0b0f17;
+  --bg-card: #111827;
+  --bg-card-hover: #1f2937;
+  --border-color: #1f293d;
+  --accent-haro: #10b981; /* Green */
+  --accent-random: #3b82f6; /* Blue */
+  --accent-user: #a855f7; /* Purple */
+  --accent-baseline: #f59e0b; /* Amber */
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: #f3f4f6;
+  overflow-x: hidden;
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0f17;
+}
+::-webkit-scrollbar-thumb {
+  background: #232d3f;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #374151;
+}
+
+/* Glassmorphism panels */
+.glass-panel {
+  background: rgba(17, 24, 39, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Leaflet Map overrides for dark theme */
+#map {
+  width: 100%;
+  height: 100%;
+  background: #090d14;
+}
+
+.leaflet-container {
+  font-family: var(--font-sans) !important;
+  background-color: #0b0f17 !important;
+}
+
+.leaflet-bar a {
+  background-color: #111827 !important;
+  color: #e5e7eb !important;
+  border-bottom: 1px solid #1f2937 !important;
+}
+.leaflet-bar a:hover {
+  background-color: #1f2937 !important;
+  color: #ffffff !important;
+}
+
+/* Custom Marker Styling */
+.marker-pin {
+  width: 28px;
+  height: 28px;
+  border-radius: 50% 50% 50% 0;
+  position: absolute;
+  transform: rotate(-45deg);
+  left: 50%;
+  top: 50%;
+  margin: -14px 0 0 -14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.2s ease-in-out;
+}
+
+.marker-pin::after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  margin: 8px 0 0 8px;
+  background: #ffffff;
+  position: absolute;
+  border-radius: 50%;
+}
+
+/* Pulse animation for active optimization stations */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+  70% {
+    transform: scale(1.15);
+    box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+.pulse-haro {
+  animation: pulse-ring 1.8s infinite;
+}
+
+/* Station Offline Animation for Resilience Simulation */
+@keyframes pulse-offline {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.8);
+  }
+  70% {
+    transform: scale(1.15);
+    box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+  }
+}
+
+.pulse-offline {
+  animation: pulse-offline 1.5s infinite;
+  background-color: #ef4444 !important;
+  border-color: #fca5a5 !important;
+}
+
+/* Halo Ring concentric styling */
+.halo-outer-circle {
+  stroke-dasharray: 6, 6;
+  animation: dash 20s linear infinite;
+}
+@keyframes dash {
+  to {
+    stroke-dashoffset: 1000;
+  }
+}
+
+/* Station popup styling */
+.leaflet-popup-content-wrapper {
+  background: #111827 !important;
+  color: #f3f4f6 !important;
+  border: 1px solid #374151 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.6) !important;
+}
+
+.leaflet-popup-tip {
+  background: #111827 !important;
+}
+
+/* Mode-specific Badge Accents */
+.badge-haro {
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.badge-random {
+  background: rgba(59, 130, 246, 0.15);
+  color: #60a5fa;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.badge-user {
+  background: rgba(168, 85, 247, 0.15);
+  color: #c084fc;
+  border: 1px solid rgba(168, 85, 247, 0.3);
+}
+
+.badge-baseline {
+  background: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+/* Range input slider customization */
+input[type="range"] {
+  accent-color: #10b981;
+}
+
+/* Glow effects */
+.glow-green {
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.35);
+}
+.glow-blue {
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.35);
+}
+.glow-purple {
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.35);
+}
+
+/* Crosshair cursor when user click placement is active */
+.cursor-crosshair-map {
+  cursor: crosshair !important;
+}
+
+/* Ensure Modals sit above ALL Leaflet panes (which go up to z-index: 1000) */
+#modalThesisData,
+#modalReportFigure {
+  z-index: 99999 !important;
+}
+

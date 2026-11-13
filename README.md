@@ -175,3 +175,4 @@ python3 experiments/ablation_and_resilience.py
 
 ## 3. Giấy Phép
 Dự án được phân phối dưới điều khoản của giấy phép mã nguồn mở [MIT License](LICENSE).
+# haro-sensor-placement-demo-
